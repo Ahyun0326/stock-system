@@ -34,7 +34,7 @@ class NamedLockStockFacadeTest {
 
     @Test
     @DisplayName("동시에 100개의 재고 감소 요청이 발생")
-    public void decreaseConcurrentlyWithOptimisticLock() throws InterruptedException {
+    public void decreaseConcurrentlyWithNamedLock() throws InterruptedException {
         // given
         int threadCount = 100; // 멀티 스레드 사용
         ExecutorService executorService = Executors.newFixedThreadPool(32); // 비동기로 실행하는 작업을 단순화하여 사용할 수 있게 도와주는 Java의 API
